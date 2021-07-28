@@ -1,10 +1,14 @@
 package com.joslim.client.services;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import com.joslim.client.dto.ClientDTO;
 import com.joslim.client.entities.Client;
 import com.joslim.client.repositories.ClientRepository;
 
@@ -14,9 +18,21 @@ public class ClientService {
 	@Autowired
 	ClientRepository repository;
 
-	public List<Client> findAll() {
+	@Transactional(readOnly = true)
+	public List<ClientDTO> findAll() {
+	List<Client> list = repository.findAll();
+	List<ClientDTO> listDTO = list.stream().map(client -> new ClientDTO(client)).collect(Collectors.toList());
+	
+	return listDTO;
 		
-		return repository.findAll();
+	}
+
+	@Transactional(readOnly = true)
+	public ClientDTO findById(Long id) {
+		 
+		Optional<Client> obj = repository.findById(id);
+		Client entity = obj.get();
+		return new ClientDTO(entity);
 	}
 
 }
