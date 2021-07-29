@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.joslim.client.dto.ClientDTO;
 import com.joslim.client.entities.Client;
 import com.joslim.client.repositories.ClientRepository;
+import com.joslim.client.services.exceptions.ResourceNotFoundException;
 
 @Service
 public class ClientService {
@@ -31,7 +32,7 @@ public class ClientService {
 	public ClientDTO findById(Long id) {
 		 
 		Optional<Client> obj = repository.findById(id);
-		Client entity = obj.get();
+		Client entity = obj.orElseThrow(() -> new ResourceNotFoundException("Entity not found !"));
 		return new ClientDTO(entity);
 	}
 
