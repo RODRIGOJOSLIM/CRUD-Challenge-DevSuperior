@@ -38,6 +38,7 @@ public class Client implements Serializable {
 		super();
 		this.id = id;
 		this.name = name;
+		this.cpf = cpf;
 		this.income = income;
 		this.birthDate = birthDate;
 		this.children = children;
@@ -54,6 +55,14 @@ public class Client implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 
 	public double getIncome() {
 		return income;
@@ -62,14 +71,7 @@ public class Client implements Serializable {
 	public void setIncome(double income) {
 		this.income = income;
 	}
-
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
+	
 
 	public Instant getBirthDate() {
 		return birthDate;
