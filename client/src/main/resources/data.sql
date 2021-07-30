@@ -8,3 +8,13 @@ INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Jaime S
 INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Claudison Deck', '639.928.160-10', 5275.70, TIMESTAMP WITH TIME ZONE '1976-11-27T10:40:05.12345Z', 5);
 INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Anna Souza', '321.566.250-77', 4275.70, TIMESTAMP WITH TIME ZONE '1993-01-07T10:40:05.12345Z', 1);
 INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Dirce Silva', '213.626.220-36', 2275.70, TIMESTAMP WITH TIME ZONE '1956-02-27T10:40:05.12345Z', 4);
+INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Arnaldo Antunes', '328.659.960-34', 2275.70, TIMESTAMP WITH TIME ZONE '1958-02-17T10:40:05.12345Z', 4);
+INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Jackson Jeds', '224.311.740-18', 4275.70, TIMESTAMP WITH TIME ZONE '1998-02-17T10:40:05.12345Z', 0);
+INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Astolfo Lindolfo', '106.188.760-06', 4275.70, TIMESTAMP WITH TIME ZONE '1987-09-17T10:40:05.12345Z', 3);
+INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Oda Nobunaga', '175.009.460-66', 7295.99, TIMESTAMP WITH TIME ZONE '1947-04-17T10:40:05.12345Z', 8);
+INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Toyotomi Hideyoshi', '607.061.940-47', 9975.75, TIMESTAMP WITH TIME ZONE '1947-11-17T10:40:05.12345Z', 2);
+INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Erwin Rommel', '167.271.360-92', 9375.75, TIMESTAMP WITH TIME ZONE '1967-03-18T10:40:05.12345Z', 2);
+INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Miamoto Musashi', '657.859.600-36', 7375.75, TIMESTAMP WITH TIME ZONE '1977-05-18T10:40:05.12345Z', 0);
+INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Edicreia Pirulito', '515.910.970-61', 3375.75, TIMESTAMP WITH TIME ZONE '1987-05-18T10:40:05.12345Z', 0);
+INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Carlos Paulino', '543.089.630-60', 1378.15, TIMESTAMP WITH TIME ZONE '1977-05-18T10:40:05.12345Z', 1);
+INSERT INTO tb_client (name, cpf ,income, birth_date, children) VALUES ('Gislaine Jesus', '531.527.570-18', 2375.75, TIMESTAMP WITH TIME ZONE '1977-05-31T10:40:05.12345Z', 2);
