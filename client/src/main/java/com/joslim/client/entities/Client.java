@@ -18,92 +18,104 @@ public class Client implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	private String cpf;
 	private double income;
-	
+
 	@Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
 	private Instant birthDate;
 	private Integer children;
-	
-public Client () {
-	
-}
 
-public Client(Long id, String name, double income, Instant birthDate, Integer children) {
-	super();
-	this.id = id;
-	this.name = name;
-	this.income = income;
-	this.birthDate = birthDate;
-	this.children = children;
-}
+	public Client() {
 
-public Long getId() {
-	return id;
-}
+	}
 
-public String getName() {
-	return name;
-}
+	public Client(Long id, String name, String cpf, double income, Instant birthDate, Integer children) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.income = income;
+		this.birthDate = birthDate;
+		this.children = children;
+	}
 
-public void setName(String name) {
-	this.name = name;
-}
+	public Long getId() {
+		return id;
+	}
 
-public double getIncome() {
-	return income;
-}
+	public String getName() {
+		return name;
+	}
 
-public void setIncome(double income) {
-	this.income = income;
-}
+	public void setName(String name) {
+		this.name = name;
+	}
 
-public Instant getBirthDate() {
-	return birthDate;
-}
+	public double getIncome() {
+		return income;
+	}
 
-public void setBirthDate(Instant birthDate) {
-	this.birthDate = birthDate;
-}
+	public void setIncome(double income) {
+		this.income = income;
+	}
 
-public Integer getChildren() {
-	return children;
-}
+	public String getCpf() {
+		return cpf;
+	}
 
-public void setChildren(Integer children) {
-	this.children = children;
-}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 
-@Override
-public int hashCode() {
-	final int prime = 31;
-	int result = 1;
-	result = prime * result + ((id == null) ? 0 : id.hashCode());
-	return result;
-}
+	public Instant getBirthDate() {
+		return birthDate;
+	}
 
-@Override
-public boolean equals(Object obj) {
-	if (this == obj)
-		return true;
-	if (obj == null)
-		return false;
-	if (getClass() != obj.getClass())
-		return false;
-	Client other = (Client) obj;
-	if (id == null) {
-		if (other.id != null)
+	public void setBirthDate(Instant birthDate) {
+		this.birthDate = birthDate;
+	}
+
+	public Integer getChildren() {
+		return children;
+	}
+
+	public void setChildren(Integer children) {
+		this.children = children;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
 			return false;
-	} else if (!id.equals(other.id))
-		return false;
-	return true;
-}
+		if (getClass() != obj.getClass())
+			return false;
+		Client other = (Client) obj;
+		if (cpf == null) {
+			if (other.cpf != null)
+				return false;
+		} else if (!cpf.equals(other.cpf))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		return true;
+	}
 
-
-
-	
 }
